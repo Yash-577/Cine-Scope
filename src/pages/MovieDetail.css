@@ -1,0 +1,113 @@
+.movie-detail-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.back-link {
+  text-decoration: none;
+  color: #facc15;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #ffd700;
+}
+
+.movie-detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.movie-poster {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+.movie-info {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.movie-info h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #ffd700;
+}
+
+.movie-tagline {
+  font-style: italic;
+  color: #ccc;
+}
+
+.movie-overview {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.movie-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.fav-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #facc15;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.fav-btn:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
+.fav-btn.added {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.fav-btn.added:hover {
+  background-color: #ff1c1c;
+}
+
+@media (max-width: 768px) {
+  .movie-detail-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-info {
+    max-width: 100%;
+  }
+
+  .movie-poster {
+    width: 80%;
+  }
+}

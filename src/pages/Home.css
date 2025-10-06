@@ -1,0 +1,168 @@
+/* Container for the grid of movies */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row on large screens */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px 0;
+}
+
+/* MovieCard styling */
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1e1e1e; /* dark background for cards */
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Poster image */
+.movie-poster {
+  width: 100%;
+  max-width: 200px;   /* prevents stretching and blur */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Movie title */
+.movie-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Favorite / Remove button */
+.fav-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s; /* add color transition */
+  background-color: #c99900; /* default yellow */
+  color: black; /* black text for better contrast */
+}
+
+.fav-btn.added {
+  background-color: #ff3b3b;
+  color: white;
+}
+
+.fav-btn:not(.added):hover {
+  background-color: #996600; /* darker on hover */
+  color: white;
+}
+
+/* Search results empty message */
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+
+  .movie-card {
+    max-width: 90%;
+  }
+}
+
+/* No favorites message */
+.no-favorites {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+/* ===== SEARCH BAR STYLING ===== */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 2rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2c2c2c;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.search-form input::placeholder {
+  color: #aaa;
+}
+
+.search-form input:focus {
+  border-color: #ff4757;
+  background: #3a3a3a;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #ff4757;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #e03e50;
+}
+/* Back to Home button */
+.back-to-home {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 8px 16px;
+  background-color: #c99900; /* default yellow */
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.back-to-home:hover {
+  background-color: #996600; /* darker yellow on hover */
+  color: white;
+  transform: translateY(-2px);
+}
