@@ -75,7 +75,7 @@
 .fav-btn {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #facc15;
+  background-color: #c99900;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -84,7 +84,7 @@
 }
 
 .fav-btn:hover {
-  background-color: #ffd700;
+  background-color: #996600;
   transform: scale(1.05);
 }
 
